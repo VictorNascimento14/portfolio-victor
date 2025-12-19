@@ -96,7 +96,7 @@ const App: React.FC = () => {
 
     return (
         <div className="bg-background-dark font-display text-white antialiased overflow-x-hidden selection:bg-primary selection:text-white">
-            <Header />
+            <Header mainRef={mainRef} />
             <main ref={mainRef} className="lg:h-screen lg:overflow-y-hidden h-auto overflow-y-auto">
                 <Hero />
                 <About />
