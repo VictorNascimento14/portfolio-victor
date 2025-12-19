@@ -50,9 +50,31 @@ const ProjectDetailCard: React.FC<ProjectDetailCardProps> = ({ project, onClose 
             <span>{project.year}</span>
           </div>
 
+
           <div className="text-text-secondary leading-relaxed space-y-4">
             <p>{project.description}</p>
-            <p>Este projeto representa uma exploração profunda das paisagens remotas, capturando a essência da natureza intocada. O desafio foi traduzir a vastidão e a tranquilidade do local em uma experiência visual coesa, utilizando uma paleta de cores naturais e uma composição que guia o olhar do espectador através da cena.</p>
+            <div className="flex flex-wrap gap-2 mt-2">
+              {project.demoUrl && (
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-4 py-2 bg-primary text-white rounded-lg font-semibold shadow hover:bg-primary/80 transition-colors"
+                >
+                  Visitar Projeto
+                </a>
+              )}
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-4 py-2 bg-gray-800 text-white rounded-lg font-semibold shadow hover:bg-gray-700 transition-colors"
+                >
+                  Ver no GitHub
+                </a>
+              )}
+            </div>
           </div>
 
           {project.tags.length > 0 && (

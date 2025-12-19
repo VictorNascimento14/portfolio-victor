@@ -29,14 +29,7 @@ const Projects: React.FC = () => {
         <>
             <section id="projetos" className="relative w-full flex flex-col min-h-screen justify-center overflow-hidden bg-background-dark py-16 md:py-24 snap-start">
                 {/* Background Image */}
-                <div className="absolute inset-0 z-0">
-                    <div
-                        key={activeProject.id}
-                        className="absolute inset-0 h-full w-full bg-cover bg-center transition-opacity duration-1000 animate-fade-in"
-                        style={{ backgroundImage: `url(${activeProject.fullImageUrl})` }}
-                    />
-                    <div className="absolute inset-0 bg-black/80"></div>
-                </div>
+                                {/* Background removido conforme solicitado */}
 
                 {/* Main Content */}
                 <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -79,20 +72,48 @@ const Projects: React.FC = () => {
                         className="w-full"
                     >
                         {sortedProjects.map((project) => (
-                            <SwiperSlide key={project.id} className="!w-[300px] sm:!w-[400px] lg:!w-[500px] group">
-                                <div className="relative cursor-pointer aspect-[3/4] rounded-xl overflow-hidden shadow-2xl transform transition-transform duration-500 group-hover:scale-105" onClick={() => handleProjectClick(project)}>
-                                    <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover" loading="lazy" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                                        <h4 className="font-heading text-2xl text-white uppercase">{project.title}</h4>
-                                        <p className="text-white/80 text-sm">{project.category}</p>
-                                    </div>
-                                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                      <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
-                                        <span className="material-symbols-outlined text-4xl">add</span>
-                                      </div>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
+                                                        <SwiperSlide key={project.id} className="!w-[300px] sm:!w-[400px] lg:!w-[500px] group">
+                                                                <div className="relative aspect-[3/4] rounded-xl overflow-hidden shadow-2xl transform transition-transform duration-500 group-hover:scale-105 bg-background-dark">
+                                                                        <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover cursor-pointer" loading="lazy" onClick={() => handleProjectClick(project)} />
+                                                                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                                                                                <h4 className="font-heading text-2xl text-white uppercase cursor-pointer" onClick={() => handleProjectClick(project)}>{project.title}</h4>
+                                                                                <p className="text-white/80 text-sm cursor-pointer" onClick={() => handleProjectClick(project)}>{project.category}</p>
+                                                                        </div>
+                                                                        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                                                                            <button
+                                                                                className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-2 shadow-lg hover:bg-primary/80 transition-colors"
+                                                                                onClick={() => handleProjectClick(project)}
+                                                                                title="Ver detalhes"
+                                                                            >
+                                                                                <span className="material-symbols-outlined text-4xl text-white">add</span>
+                                                                            </button>
+                                                                            <div className="flex gap-2">
+                                                                                {project.demoUrl && (
+                                                                                    <a
+                                                                                        href={project.demoUrl}
+                                                                                        target="_blank"
+                                                                                        rel="noopener noreferrer"
+                                                                                        className="px-3 py-1 bg-primary text-white rounded-lg text-xs font-semibold shadow hover:bg-primary/80 transition-colors"
+                                                                                        onClick={e => e.stopPropagation()}
+                                                                                    >
+                                                                                        Projeto
+                                                                                    </a>
+                                                                                )}
+                                                                                {project.githubUrl && (
+                                                                                    <a
+                                                                                        href={project.githubUrl}
+                                                                                        target="_blank"
+                                                                                        rel="noopener noreferrer"
+                                                                                        className="px-3 py-1 bg-gray-800 text-white rounded-lg text-xs font-semibold shadow hover:bg-gray-700 transition-colors"
+                                                                                        onClick={e => e.stopPropagation()}
+                                                                                    >
+                                                                                        GitHub
+                                                                                    </a>
+                                                                                )}
+                                                                            </div>
+                                                                        </div>
+                                                                </div>
+                                                        </SwiperSlide>
                         ))}
                     </Swiper>
 
