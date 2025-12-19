@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio de Desenvolvedor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e61954",
+                        "background-dark": "#0a0a0f",
+                        "surface-dark": "#1a1a1e",
+                        "text-secondary": "#a0a0b0",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "heading": ["Anton", "sans-serif"],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'fade-in': 'fadeIn 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards',
+                        'scale-in': 'scaleIn 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        scaleIn: {
+                            '0%': { transform: 'scale(0.95)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 5rem; /* 80px, same as header height */
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+          background: #111121; 
+      }
+      ::-webkit-scrollbar-thumb {
+          background: #242447; 
+          border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+          background: #3a3a5e; 
+      }
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "gsap": "https://esm.sh/gsap@3.12.5",
+    "swiper": "https://esm.sh/swiper@11",
+    "swiper/": "https://esm.sh/swiper@11/",
+    "swiper/react": "https://esm.sh/swiper@11/react"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-background-dark text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
