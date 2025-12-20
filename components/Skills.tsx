@@ -8,7 +8,7 @@ const Skills: React.FC = () => {
     <section 
       id="habilidades" 
       // O 'relative' aqui é fundamental para que o 'absolute' do CurvedLoop funcione
-      className="relative w-full min-h-screen flex items-center justify-center bg-black pattern text-white py-24 sm:py-32 snap-start overflow-hidden"
+      className="relative w-full h-screen flex items-center justify-center bg-black pattern text-white py-8 snap-start overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2 w-full z-10">
         <div className="text-center mb-20">
@@ -40,7 +40,7 @@ const Skills: React.FC = () => {
       </div>
 
       {/* COMPONENTE NO CANTINHO INFERIOR */}
-      <div className="absolute bottom-[-420px] left-0 w-full z-0 translate-y-10 sm:translate-y-20">
+      <div className="absolute bottom-[-320px] left-0 w-full z-0 translate-y-10 sm:translate-y-20">
         <CurvedLoop 
           marqueeText="DESENVOLVIMENTO WEB ✦ MOBILE ✦ UI/UX ✦ CSS ✦ HTML ✦ REACT ✦"
           speed={0.2}

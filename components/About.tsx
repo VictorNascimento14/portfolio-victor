@@ -4,7 +4,7 @@ import ProfileCard from './ProfileCard';
 
 const About: React.FC = () => {
     return (
-        <section id="sobre" className="relative w-full min-h-screen flex items-center justify-center bg-black text-white py-24 sm:py-32 snap-start overflow-hidden">
+        <section id="sobre" className="relative w-full h-screen flex items-start justify-center bg-black text-white pt-28 pb-8 snap-start overflow-hidden">
             
             {/* SVG de Fundo Decorativo */}
             <div className="absolute inset-0 pointer-events-none flex items-end justify-center">
@@ -80,7 +80,7 @@ const About: React.FC = () => {
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* ... Resto do seu conteúdo (Quem sou eu, Grid, Stats) ... */}
-                <div className="text-center mb-16">
+                <div className="text-center mb-10">
                     <p className="text-lg text-text-secondary uppercase tracking-[0.2em] font-medium">Sobre</p>
                     <h2 className="text-4xl sm:text-6xl font-heading uppercase text-primary font-black tracking-tight mt-1">
                         QUEM SOU EU
@@ -113,7 +113,7 @@ const About: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="mt-32 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
                     {STATS.map(stat => (
                         <div key={stat.label} className="py-9  border-white/10">
                             <p className="text-6xl sm:text-7xl lg:text-7xl font-heading text-primary font-black">{stat.value}</p>
