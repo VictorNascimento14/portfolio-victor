@@ -27,26 +27,21 @@ const Projects: React.FC = () => {
 
     return (
         <>
-            <section id="projetos" className="relative w-full flex flex-col min-h-screen justify-center overflow-hidden bg-background-dark py-16 md:py-24 snap-start">
+            <section id="projetos" className="relative w-full h-screen flex flex-col overflow-hidden bg-background-dark pt-24 pb-4 snap-start">
                 {/* Background Image */}
                                 {/* Background removido conforme solicitado */}
 
                 {/* Main Content */}
-                <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <div className="mb-12">
-                         <p className="text-lg text-text-secondary uppercase tracking-[0.2em] font-medium">Portfólio</p>
-                         <h2 className="text-4xl sm:text-5xl font-heading uppercase text-primary font-black tracking-tight mt-1">
-                            Meus Projetos
-                        </h2>
-                        <div className="w-20 h-1 bg-primary mx-auto mt-4"></div>
+                <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex-shrink-0">
+                    <div className="mb-2">
+                        <p className="text-sm text-text-secondary uppercase tracking-[0.2em] font-medium">Portfólio</p>
+                        <h2 className="text-3xl sm:text-4xl font-heading uppercase text-primary font-black tracking-tight mt-1">Meus Projetos</h2>
+                        <div className="w-16 h-1 bg-primary mx-auto mt-2"></div>
                     </div>
-                    
-                    <div className="h-28">
+                    <div className="h-14 md:h-16">
                         <div key={activeProject.id} className="animate-fade-in">
-                            <p className="font-display text-sm uppercase tracking-widest text-text-secondary">{activeProject.category}</p>
-                            <h3 className="mt-1 font-heading text-4xl lg:text-5xl uppercase leading-none text-white">
-                                {activeProject.title}
-                            </h3>
+                            <p className="font-display text-xs uppercase tracking-widest text-text-secondary">{activeProject.category}</p>
+                            <h3 className="mt-1 font-heading text-3xl lg:text-4xl uppercase leading-none text-white">{activeProject.title}</h3>
                         </div>
                     </div>
                 </div>

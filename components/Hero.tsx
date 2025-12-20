@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section id="hero" className="relative w-full min-h-screen flex items-center justify-center text-center bg-black pt-20 snap-start overflow-hidden">
+    <section id="hero" className="relative w-full h-screen flex items-center justify-center text-center bg-black pt-20 snap-start overflow-hidden">
       
       {/* Container do Background com "Safe Area" */}
       <div className="absolute inset-0 z-0 pointer-events-none">

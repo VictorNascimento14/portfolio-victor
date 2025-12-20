@@ -29,7 +29,7 @@ const Contact: React.FC = () => {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat' 
       }}
-      className="relative w-full min-h-screen flex flex-col items-center justify-between text-white snap-start overflow-hidden"
+      className="relative w-full h-screen flex flex-col items-center justify-between text-white snap-start overflow-hidden"
     >
       {/* Espaçador superior para empurrar o conteúdo para o centro */}
       <div />
