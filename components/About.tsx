@@ -92,7 +92,8 @@ const About: React.FC = () => {
                     <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-10">
                         <div className="space-y-8">
                             <p className="text-text-secondary leading-relaxed">
-                                Desenvolvedor WordPress e Flutter altamente motivado e profissional com mais de 3 anos de experiência no desenvolvimento de aplicações web e mobile de ponta. Histórico comprovado na entrega de soluções confiáveis e eficientes no prazo, dentro do orçamento e com excelente satisfação do cliente.
+                                Desenvolvedor Full Stack, com mais de 2 anos de experiência no desenvolvimento de aplicações web. Atuo tanto no Front-End, criando interfaces modernas, responsivas e focadas na experiência do usuário, quanto no Back-End, desenvolvendo APIs e regras de negócio bem estruturadas.
+                                Tenho forte compromisso com código limpo, boas práticas, performance e organização, entregando soluções eficientes, confiáveis e alinhadas às necessidades do negócio.
                             </p>
                             <a href="#" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-md text-sm hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105">
                                 Saiba Mais
