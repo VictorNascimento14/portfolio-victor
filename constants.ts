@@ -24,7 +24,7 @@ export const PROJECTS: Project[] = [
     tags: ["react", "typescript", "tailwindcss", "nodejs", "Vite", "Clerk", "Convex"],
     imageUrl: '/servicepro.png',
     fullImageUrl: '/servicepro.png',
-     demoUrl: 'https://exemplo-servicepro.com',
+     demoUrl: 'https://service-pro-rust.vercel.app/',
      githubUrl: 'https://github.com/VictorNascimento14/ServicePro',
   },
   {
